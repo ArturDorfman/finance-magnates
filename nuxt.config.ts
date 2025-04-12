@@ -3,23 +3,22 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: [
-    ['@nuxtjs/tailwindcss', {
-      config: {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif']
-            },
-            lineHeight: {
-              default: '1.3'
-            }
+  modules: [['@nuxtjs/tailwindcss', {
+    config: {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif']
+          },
+          lineHeight: {
+            default: '1.3'
           }
         }
       }
-    }],
-    '@nuxt/eslint'
-  ],
+    }
+  }],
+  '@nuxt/eslint',
+  'nuxt-swiper'],
 
   app: {
     head: {

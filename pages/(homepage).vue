@@ -7,6 +7,7 @@
 <script setup>
 import ComplianceSection from '~/components/ComplianceSection'
 import MonthlyComplianceGuide from '~/components/MonthlyComplianceGuide'
+import RegulatoryIntelligenceInsight from '~/components/RegulatoryIntelligenceInsight'
 
 const sections = [
   {
@@ -17,6 +18,10 @@ const sections = [
     id: 'monthly-compliance-guide',
     component: MonthlyComplianceGuide,
     class: 'px-4 py-8 md:px-16 md:py-16'
+  },
+  {
+    id: 'regulatory-intelligence-insight',
+    component: RegulatoryIntelligenceInsight
   }
 ]
 </script>

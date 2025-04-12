@@ -1,16 +1,22 @@
 <template>
-  <section class="relative overflow-hidden -mx-4">
-    <div class="relative px-4 md:p-0">
+  <section class="relative overflow-hidden -mx-4 -my-8 md:-mx-16 md:-my-16">
+    <div class="relative px-4 py-8 md:px-16 md:py-16">
       <!-- First gradient orb -->
       <div
-        class="gradient-orb-primary absolute rounded-full
-          left-[-60%] top-[20%] w-[500px] h-[500px]"
+        class="gradient-orb-primary absolute rounded-full blur-lg
+          left-[-60%] top-[20%] w-[500px] h-[500px]
+          md:left-[-15%] md:top-[10%] md:w-[600px] md:h-[800px]
+          lg:left-[65%] lg:top-[0%] lg:w-[700px] lg:h-[700px]
+          "
       />
 
       <!-- Second gradient orb -->
       <div
-        class="gradient-orb-secondary absolute rounded-full
-          left-[25%] bottom-[-10%] w-[385px] h-[385px]"
+        class="gradient-orb-secondary absolute rounded-full blur-lg
+          left-[25%] bottom-[-10%] w-[385px] h-[385px]
+          md:left-[45%] md:bottom-[-2%] md:w-[450px] md:h-[450px]
+          lg:left-[80%] lg:bottom-[-10%] lg:w-[550px] lg:h-[550px]
+        "
       />
 
       <header class="mb-6 relative">
@@ -26,19 +32,21 @@
       </header>
 
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-16 relative">
-        <div class="mb-6 relative z-10">
-          <h1 class="text-3xl font-semibold text-white mb-6">
+        <div class="grow mb-6 md:mb-[54px] relative z-10">
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 md:mb-9">
             Stay Informed.<br>
             Stay Compliant.
           </h1>
 
-          <p class="text-gray-300 text-base leading-normal">
+          <p class="max-w-[660px] text-gray-300 text-base md:text-xl leading-normal">
             Sign up to access the latest Insights on Regulatory Highlights,
             Recent Developments, and Future Outlook—all in one monthly report.
           </p>
         </div>
 
-        <ComplianceForm class="relative z-10 opacity-100" />
+        <div class="md:px-8 lg:px-0">
+          <ComplianceForm class="max-w-[576px] relative z-10 opacity-100" />
+        </div>
       </div>
     </div>
   </section>

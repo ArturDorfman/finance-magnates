@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden -mx-4 -my-8 md:-mx-16 md:-my-16">
+  <section class="relative overflow-hidden">
     <div class="relative px-4 py-8 md:px-16 md:py-16">
       <!-- First gradient orb -->
       <div

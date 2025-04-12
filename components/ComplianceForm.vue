@@ -61,13 +61,13 @@
         <p v-if="errors.company" class="error-message">{{ errors.company }}</p>
       </div>
 
-      <button
+      <AppButton
         type="submit"
-        class="mt-8 w-full bg-[#1335F5] text-white font-semibold py-3 px-6 rounded"
         :disabled="isSubmitting"
+        class="mt-8"
       >
         {{ isSubmitting ? 'Submitting...' : 'Get Free Report' }}
-      </button>
+      </AppButton>
 
       <div class="mt-4 text-gray-400">
         <p>
@@ -188,7 +188,7 @@ function clearError (field) {
 }
 
 .form-label {
-  @apply block text-[#A3A5A6] mb-1.5 leading-normal;
+  @apply block mb-1.5 leading-normal;
 }
 
 .form-input {

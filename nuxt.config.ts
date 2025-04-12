@@ -9,10 +9,13 @@ export default defineNuxtConfig({
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
+              sans: ['Poppins', 'sans-serif']
             },
-          },
-        },
+            lineHeight: {
+              default: '1.3'
+            }
+          }
+        }
       }
     }],
     '@nuxt/eslint'
@@ -43,5 +46,5 @@ export default defineNuxtConfig({
         { rel: 'preload', as: 'font', crossorigin: 'anonymous', href: 'https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2' }
       ]
     }
-  },
+  }
 })

@@ -1,29 +1,36 @@
 <template>
-  <section class="bg-[#191b21]">
-    <h2 class="text-2xl md:text-4xl font-semibold mb-5 text-white">
-      Your Monthly Compliance Guide
-    </h2>
-
-    <p class="text-lg sm:text-xl">
-      The Finance Magnates Compliance Industry Report provides an overview of key regulatory changes
-      to help businesses navigate compliance challenges
-    </p>
-
-    <ul class="my-6 md:my-8 lg:my-16 grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-16 md:gap-y-8 lg:gap-y-16">
-      <li
-        v-for="item in report"
-        :key="item.title"
+  <InfoGrid
+    tag="section"
+    title="Your Monthly Compliance Guide"
+    description="The Finance Magnates Compliance Industry Report provides an overview of key regulatory changes
+      to help businesses navigate compliance challenges"
+    class="bg-[#191b21]"
+    :items="report"
+  >
+    <template #content="{ items }">
+      <ul
+        class="my-6 md:my-8 lg:my-16 grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-x-16 md:gap-y-8 lg:gap-y-16"
+        :class="contentClass"
       >
-        <h3 class="text-lg font-semibold mb-2 text-white">{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </li>
-    </ul>
+        <li
+          v-for="item in items"
+          :key="item.title"
+        >
+          <h3 class="text-lg font-semibold mb-2 text-white">{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </li>
+      </ul>
+    </template>
 
-    <AppButton>Get Free Report</AppButton>
-  </section>
+    <template #action>
+      <AppButton>Get Free Report</AppButton>
+    </template>
+  </InfoGrid>
 </template>
 
 <script setup>
+import InfoGrid from './InfoGrid.vue'
+
 const report = [
   {
     title: 'Regulatory Updates',

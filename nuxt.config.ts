@@ -16,9 +16,7 @@ export default defineNuxtConfig({
         }
       }
     }
-  }],
-  '@nuxt/eslint',
-  'nuxt-swiper'],
+  }], '@nuxt/eslint', 'nuxt-swiper', '@nuxt/icon'],
 
   app: {
     head: {

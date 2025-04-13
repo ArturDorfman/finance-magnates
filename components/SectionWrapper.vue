@@ -1,7 +1,7 @@
 <template>
-  <div class="px-4 py-8 md:px-16 md:py-16">
+  <component :is="tag" class="px-4 py-8 md:px-16 md:py-16">
     <slot />
-  </div>
+  </component>
 </template>
 
 <script setup>

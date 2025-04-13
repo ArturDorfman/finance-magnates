@@ -20,15 +20,13 @@
       />
 
       <header class="mb-6 relative">
-        <nav>
-          <NuxtLink to="/">
-            <img
-              src="/images/fmintelligence-logo.svg"
-              alt="FM Intelligence"
-              class="h-8 my-1.5"
-            >
-          </NuxtLink>
-        </nav>
+        <NuxtLink to="/">
+          <img
+            src="/icons/fmintelligence-logo.svg"
+            alt="FM Intelligence"
+            class="h-8 my-1.5"
+          >
+        </NuxtLink>
       </header>
 
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-16 relative">

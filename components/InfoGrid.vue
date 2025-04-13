@@ -18,7 +18,7 @@
 defineProps({
   tag: {
     type: String,
-    default: 'section'
+    default: 'div'
   },
   title: {
     type: String,

@@ -4,7 +4,6 @@
       <swiper-slide
         v-for="(slide, idx) in slides"
         :key="idx"
-        class="flex items-center justify-center"
       >
         <slot :name="`slide-${idx}`" :slide="slide" />
       </swiper-slide>
@@ -25,12 +24,16 @@ const props = defineProps({
   autoplayDelay: {
     type: Number,
     default: 5000
+  },
+  spaceBetween: {
+    type: Number
   }
 })
 
 const containerRef = useTemplateRef('containerRef')
 
 useSwiper(containerRef, {
+  spaceBetween: props.spaceBetween,
   slidesPerView: 1,
   breakpoints: {
     640: {
@@ -53,6 +56,18 @@ useSwiper(containerRef, {
       shadow: true,
       translate: [0, 0, -400]
     }
-  }
+  },
+  pagination: true
 })
 </script>
+
+<style>
+:root {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-inactive-color: #808080;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 21px;
+}
+</style>

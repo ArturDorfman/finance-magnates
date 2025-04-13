@@ -22,15 +22,15 @@
       </template>
 
       <template #action>
-        <AppButton>Get Free Report</AppButton>
+        <AppButton @click="handleSubmit">
+          {{ isSubmitting ? 'Submitting...' : 'Get Free Report' }}
+        </AppButton>
       </template>
     </InfoGrid>
   </SectionWrapper>
 </template>
 
 <script setup>
-import InfoGrid from './InfoGrid.vue'
-
 const report = [
   {
     title: 'Regulatory Updates',
@@ -57,4 +57,17 @@ const report = [
     description: 'Track shifts in domestic insurance regulations to keep your business compliant'
   }
 ]
+
+const isSubmitting = ref(false)
+
+async function handleSubmit () {
+  isSubmitting.value = true
+
+  try {
+    // TODO: Implement actual form submission logic here
+    await new Promise(resolve => setTimeout(resolve, 1000)) // Simulated API call
+  } finally {
+    isSubmitting.value = false
+  }
+}
 </script>

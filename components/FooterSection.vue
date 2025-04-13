@@ -44,7 +44,7 @@
       </div>
 
       <!-- Navigation Links -->
-      <nav class="md:col-span-1 lg:col-span-3 flex justify-end">
+      <nav class="md:col-span-1 lg:col-span-3 flex md:justify-end">
         <ul class="space-y-2">
           <li
             v-for="link in navigationLinks"

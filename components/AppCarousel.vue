@@ -21,12 +21,15 @@ const props = defineProps({
     type: Boolean,
     default: true
   },
-  autoplayDelay: {
-    type: Number,
-    default: 5000
+  autoplay: {
+    type: Object
   },
   spaceBetween: {
     type: Number
+  },
+  pagination: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -44,9 +47,7 @@ useSwiper(containerRef, {
     }
   },
   loop: props.loop,
-  autoplay: {
-    delay: props.autoplayDelay
-  },
+  autoplay: props.autoplay,
   creativeEffect: {
     prev: {
       shadow: true,
@@ -57,7 +58,7 @@ useSwiper(containerRef, {
       translate: [0, 0, -400]
     }
   },
-  pagination: true
+  pagination: props.pagination
 })
 </script>
 
